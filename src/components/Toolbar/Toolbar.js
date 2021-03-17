@@ -1,10 +1,10 @@
 import classes from "./Toolbar.module.css"
 
-const Layout = ({ }) => {
+const Toolbar = ({ }) => {
     return ( 
         <div className={classes.Toolbar}>
         </div>
      );
 }
  
-export default Layout;
+export default Toolbar;
