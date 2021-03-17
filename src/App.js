@@ -1,8 +1,11 @@
+import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
     <div className="App">
-      Awesome Builder by Tatyna Kubatova
+      <Layout>
+        Awesome Builder by Tatyna Kubatova
+         </Layout>
     </div>
   );
 }
