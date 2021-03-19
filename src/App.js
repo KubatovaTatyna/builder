@@ -1,11 +1,12 @@
 import Layout from "./components/Layout/Layout";
+import  "./App.css";
 
 function App() {
   return (
     <div className="App">
       <Layout>
-        Awesome Builder by Tatyna Kubatova
-         </Layout>
+        Houseplant Shop by Tatyna Kubatova
+      </Layout>
     </div>
   );
 }
