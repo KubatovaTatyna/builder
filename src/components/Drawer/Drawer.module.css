@@ -9,4 +9,11 @@
     background-color: rgb(120, 198, 120);
     color: white;
     box-shadow:  0 0 10px rgba(0, 0, 0, .5);
+    transition: transform .3s ease-out;
+}
+.open{
+    transform: translateX(0);
+}
+.close{
+    transform: translateX(-260px);
 }
