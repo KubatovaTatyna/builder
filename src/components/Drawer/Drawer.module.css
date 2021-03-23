@@ -6,8 +6,8 @@
     left: 0;
 
     font-size: 1.7rem;
-    background-color: rgb(120, 198, 120);
-    color: white;
+    background: lightgray;
+    color: black;
     box-shadow:  0 0 10px rgba(0, 0, 0, .5);
     transition: transform .3s ease-out;
 }

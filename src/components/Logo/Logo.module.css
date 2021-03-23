@@ -5,4 +5,5 @@
 .Logo img{
     height: 3rem;
     margin: .5rem;
+    cursor: pointer;
 }
