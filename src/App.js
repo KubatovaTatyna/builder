@@ -1,4 +1,5 @@
 import Layout from "./components/Layout/Layout";
+import HouseplantShop from "./components/HouseplantShop/HouseplantShop"
 import  "./App.css";
 
 function App() {
