@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        Houseplant Shop by Tatyna Kubatova
+        <HouseplantShop />
       </Layout>
     </div>
   );
