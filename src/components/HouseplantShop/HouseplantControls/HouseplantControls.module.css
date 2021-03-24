@@ -1,8 +1,7 @@
 .HouseplantControls{
-    background-color: green;
+    background-color: rgb(59, 163, 59);
     width: 350px;
     height: 500px;
     padding: 1rem;
     border-radius: 1rem;
-    margin-top: 1rem;
 }
