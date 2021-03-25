@@ -9,9 +9,12 @@ const HouseplantPreview = ({pots}) => {
         }
     }
     return ( 
-        <div className={classes.HouseplantPreview}>
-            {result}
+    <div className={classes.HouseplantPreview}>
+        <div
+          className={classes.pots}>
+          {result}
         </div>
+      </div>
      );
 }
  

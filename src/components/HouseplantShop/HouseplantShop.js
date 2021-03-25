@@ -4,8 +4,8 @@ import classes from "./HouseplantShop.module.css";
 
 const HouseplantShop = () => {
     const pots ={
-        cactus:4,
-        arrowhead:5,
+        cactus:2,
+        arrowhead:4,
     }
     return ( 
         <div className={classes.HouseplantShop}>
