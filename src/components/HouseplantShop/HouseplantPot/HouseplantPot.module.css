@@ -1,5 +1,7 @@
 .HouseplantPot{
     background-size: cover;
-    margin: 0;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-top: 7px;
     display: flex;
 }

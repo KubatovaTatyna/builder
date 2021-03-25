@@ -4,16 +4,16 @@ import classes from "./HouseplantShop.module.css";
 
 const HouseplantShop = () => {
     const pots ={
-        alocasia:2,
-        begonia:4,
-        bonsai:4,
-        calathea:4,
-        cyclamen:4,
-        dracaena:4,
-        echinocactus:4,
-        opuntia:4,
-        sansevieria:4,
-        spurge:4,
+        alocasia:1,
+        begonia:1,
+        bonsai:1,
+        calathea:1,
+        cyclamen:1,
+        dracaena:1,
+        echinocactus:1,
+        opuntia:1,
+        sansevieria:1,
+        spurge:1,
     }
     return ( 
         <div className={classes.HouseplantShop}>

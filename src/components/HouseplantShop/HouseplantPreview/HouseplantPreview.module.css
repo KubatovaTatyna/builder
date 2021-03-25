@@ -1,6 +1,7 @@
 .HouseplantPreview{
     width: 650px;
     background-color: rgb(243, 219, 3);
+    border-radius: 20px;
 
     margin-right: 1rem;
     margin-bottom: 1rem;
@@ -11,4 +12,11 @@
 .pots{
   display: flex;
   flex-wrap: wrap;
+  margin: 5px;
+}
+@media(max-width:1030px){
+  .HouseplantPreview{
+    max-width: 90%;
+    margin: auto;
+  }
 }
