@@ -5,3 +5,6 @@
     margin-top: 7px;
     display: flex;
 }
+.HouseplantPot:hover{
+    transform: scale(1.1);
+}
