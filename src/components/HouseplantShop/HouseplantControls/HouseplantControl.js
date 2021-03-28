@@ -2,7 +2,6 @@ import classes from "../HouseplantControls/HouseplantControl.module.css";
 import HouseplantPotSize from "../HouseplantPotSize/HouseplantPotSize"
 
 const HouseplantControl = ({type , addPot , removePot}) => {
-   
     return (
     <div className={classes.HouseplantControl}>
         <button 

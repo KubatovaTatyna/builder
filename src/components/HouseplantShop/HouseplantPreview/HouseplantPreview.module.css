@@ -12,6 +12,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 5px;
+  padding-left: 18px;
 }
 @media(max-width:1020px){
   .HouseplantPreview{
