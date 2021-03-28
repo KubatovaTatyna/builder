@@ -25,9 +25,12 @@ const HouseplantShop = () => {
         }
     }
     return ( 
+        <div>
+        <h1 className={classes.H1}> Houseplant Shop </h1>
         <div className={classes.HouseplantShop}>
             <HouseplantPreview pots={pots} />
             <HouseplantControls pots={pots} addPot={addPot} removePot={removePot}/>
+        </div>
         </div>
      );
 }

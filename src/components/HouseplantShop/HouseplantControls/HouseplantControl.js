@@ -1,4 +1,3 @@
-
 import classes from "../HouseplantControls/HouseplantControl.module.css";
 import HouseplantPotSize from "../HouseplantPotSize/HouseplantPotSize"
 
