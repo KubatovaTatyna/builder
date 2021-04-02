@@ -1,5 +1,6 @@
 .HouseplantPot{
-    background-size: cover;
+    width: 50px;
+    height: 50px;
     margin-right: 7px;
     margin-bottom: 7px;
     margin-top: 7px;
@@ -9,19 +10,21 @@
 .HouseplantPot:hover{
     transform: scale(1.1);
 }
-
-/* .animation{
-    animation-name: potAnimation;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
+.alocasia{
+    background-image: url(../../../images/alocasia.svg);
 }
-@keyframes potAnimation {
-    10% {
-        transform:scale(1);
-    }
-    100%{
-        transform:scale(2);
-    }
-} */
+.begonia{
+    background-image: url(../../../images/begonia.svg);
+}
+.bonsai{
+    background-image: url(../../../images/bonsai.svg);
+}
+.calathea{
+    background-image: url(../../../images/calathea.svg);
+}
+.cyclamen{
+    background-image: url(../../../images/cyclamen.svg);
+}
+.dracaena{
+    background-image: url(../../../images/dracaena.svg);
+}
