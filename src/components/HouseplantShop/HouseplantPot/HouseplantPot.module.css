@@ -1,35 +1,27 @@
 .HouseplantPot{
-    width: 70px;
-    height: 70px;
+    background-size: cover;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-top: 7px;
     display: flex;
-    margin: 3px;
-    justify-content: center;
-    align-items: center;
+    
 }
 .HouseplantPot:hover{
     transform: scale(1.1);
 }
-.alocasia{
-    background-image: url(../../../images/alocasia.svg);
+
+/* .animation{
+    animation-name: potAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
-.begonia{
-    background-image: url(../../../images/begonia.svg);
-}
-.bonsai{
-    background-image: url(../../../images/bonsai.svg);
-}
-.calathea{
-    background-image: url(../../../images/calathea.svg);
-}
-.cyclamen{
-    background-image: url(../../../images/cyclamen.svg);
-}
-.dracaena{
-    background-image: url(../../../images/dracaena.svg);
-}
-@media(max-width:960px){
-    .HouseplantPot{
-        width: 65px;
-        height: 65px;
+@keyframes potAnimation {
+    10% {
+        transform:scale(1);
     }
-}
+    100%{
+        transform:scale(2);
+    }
+} */
