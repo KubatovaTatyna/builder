@@ -4,6 +4,7 @@ import classes from "./HouseplantShop.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import React from "react"
+import Modal from "../UI/Modal/Modal";
 
 const HouseplantShop = () => {
     const prices = {
@@ -46,6 +47,7 @@ const HouseplantShop = () => {
             <div className={classes.HouseplantShop}>
                 <HouseplantPreview pots={pots} price={price} />
                 <HouseplantControls pots={pots} addPot={addPot} removePot={removePot} />
+                <Modal>Hello</Modal>
             </div>
         </div>
     );
