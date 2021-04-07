@@ -6,7 +6,7 @@ const HouseplantControls = ({pots , addPot , removePot}) => {
     const results =[];
     let total = 0;
     for (const pot in pots) {
-        total += pots[pots]
+        total += pots[pot];
         results.push(<HouseplantControl type={pot} addPot={addPot} removePot={removePot} count={pots[pot]}/>)
     }
     return ( 
