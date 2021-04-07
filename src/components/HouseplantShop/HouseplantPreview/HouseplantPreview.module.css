@@ -1,33 +1,34 @@
-.HouseplantPreview{
-    width: 650px;
-    height: 400px;
-    background-color: rgb(243, 219, 3);
-    border-radius: 50px;
-    
-    margin-bottom: 1rem;
+.HouseplantPreview {
+  width: 650px;
+  height: 400px;
+  background-color: rgb(243, 219, 3);
+  border-radius: 50px;
+
+  margin-bottom: 1rem;
 }
-.pots{
+.pots {
   display: flex;
   flex-wrap: wrap;
   margin: 5px;
   padding-left: 18px;
 }
-.price{
-  background-color:green;
+.price {
+  background-color: green;
   max-width: 250px;
   margin: 0 auto;
   text-align: center;
   color: white;
   font-size: 32px;
   padding: 5px;
+  margin-bottom: 2rem;
 }
-@media(max-width:1020px){
-  .HouseplantPreview{
+@media (max-width: 1020px) {
+  .HouseplantPreview {
     max-width: 80%;
     margin: auto;
     margin-bottom: 2rem;
   }
-  .price{
-    margin-bottom: 2rem;
+  .price {
+    margin-top: 1rem;
   }
 }

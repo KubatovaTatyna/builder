@@ -1,17 +1,18 @@
 import HouseplantControl from "./HouseplantControl";
 import classes from "./HouseplantControls.module.css";
+import Button from "../../UI/Button/Button"
 
 const HouseplantControls = ({pots , addPot , removePot}) => {
     const results =[];
     let total = 0;
     for (const pot in pots) {
         total += pots[pots]
-        results.push(<HouseplantControl type={pot} addPot={addPot} removePot={removePot}/>)
+        results.push(<HouseplantControl type={pot} addPot={addPot} removePot={removePot} count={pots[pot]}/>)
     }
     return ( 
         <div className={classes.HouseplantControls}>
             {results}
-            <button disabled={!total}>Order</button>
+            <Button disabled={!total}>Order</Button>
         </div>
      );
 }

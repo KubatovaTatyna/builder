@@ -24,14 +24,6 @@ const HouseplantShop = () => {
                 setPots(response.data.pots);
             });
     }, []);
-    // const prices = useEffect(() => {
-    //     axios.get("https://builder-b9129-default-rtdb.firebaseio.com/price.json")
-    //         .then((response) => {
-    //             const newPrice = response.data;
-    //             setPrice(newPrice)
-    //         })
-    // }, []);
-
     
     function addPot(type) {
         const newPots = { ...pots };

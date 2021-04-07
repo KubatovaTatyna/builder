@@ -10,13 +10,14 @@ const HouseplantPreview = ({ pots, price }) => {
   }
   return (
     <div>
-      <div className={classes.HouseplantPreview}>
-        <div
-          className={classes.pots}>
+    <div className={classes.HouseplantPreview}>
+        <div className={classes.pots}>
           {result}
         </div>
-      </div>
-      <div className={classes.price}>{price.toFixed(1)} som</div>
+    </div> 
+    <div> 
+        <div className={classes.price}>{price.toFixed(1)} som</div>
+    </div>
     </div>
   );
 }

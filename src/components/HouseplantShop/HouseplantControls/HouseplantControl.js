@@ -1,16 +1,17 @@
 import classes from "../HouseplantControls/HouseplantControl.module.css";
 import HouseplantPotSize from "../HouseplantPotSize/HouseplantPotSize"
+import Button from "../../UI/Button/Button"
 
-const HouseplantControl = ({type , addPot , removePot}) => {
+const HouseplantControl = ({type , addPot , removePot , count}) => {
     return (
     <div className={classes.HouseplantControl}>
-        <button 
+        <Button 
         className={classes.Button} 
-        onClick={() => addPot(type)}>+</button>
+        onClick={() => addPot(type)}>+</Button>
          <HouseplantPotSize type={type} />
-        <button 
+        <Button 
         className={classes.Button} 
-        onClick={() => removePot(type)}>-</button>
+        onClick={() => removePot(type)} disabled={!count}>-</Button>
     </div> );
 }
  
