@@ -17,7 +17,7 @@ const HouseplantShop = () => {
     }
     const [price, setPrice] = useState(0);
     const [pots, setPots] = useState({});
-
+    const [ordering , setOrdering] = useState(false)
     useEffect(() => {
         axios.get('https://builder-b9129-default-rtdb.firebaseio.com/default.json')
             .then((response) => {
@@ -41,13 +41,19 @@ const HouseplantShop = () => {
             setPrice(price - prices[type]);
         }
     }
+    function startOrdering() {
+        setOrdering(true)
+    }
+    function stopOrdering() {
+        setOrdering(false)
+    }
     return (
         <div>
             <h1 className={classes.H1}> Houseplant Shop </h1>
             <div className={classes.HouseplantShop}>
                 <HouseplantPreview pots={pots} price={price} />
-                <HouseplantControls pots={pots} addPot={addPot} removePot={removePot} />
-                <Modal>Hello</Modal>
+                <HouseplantControls pots={pots} addPot={addPot} removePot={removePot} startOrdering={startOrdering} />
+                <Modal show={ordering} cancel={stopOrdering}>Hello</Modal>
             </div>
         </div>
     );
