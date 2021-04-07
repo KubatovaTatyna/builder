@@ -15,27 +15,31 @@ const HouseplantShop = () => {
         dracaena:80
     }
     const [price, setPrice] = useState(0);
-    const [pots, setPots] = useState([]);
+    const [pots, setPots] = useState({});
+
     useEffect(() => {
-        axios.get('https://builder-b9129-default-rtdb.firebaseio.com/pots.json')
+        axios.get('https://builder-b9129-default-rtdb.firebaseio.com/default.json')
             .then((response) => {
-                const pots = response.data;
-                setPots(pots);
+                setPrice(response.data.price);
+                setPots(response.data.pots);
             });
     }, []);
-    // useEffect(() => {
+    // const prices = useEffect(() => {
     //     axios.get("https://builder-b9129-default-rtdb.firebaseio.com/price.json")
     //         .then((response) => {
-    //             const prices = response.data;
-    //             setPrice(prices)
+    //             const newPrice = response.data;
+    //             setPrice(newPrice)
     //         })
-    // }, [])
+    // }, []);
+
+    
     function addPot(type) {
         const newPots = { ...pots };
         newPots[type]++;
         setPots(newPots);
         setPrice(price + prices[type]);
     };
+
     function removePot(type) {
         if (pots[type]) {
             const newPots = { ...pots };
