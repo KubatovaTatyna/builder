@@ -1,24 +1,32 @@
 import classes from "../HouseplantControls/HouseplantControl.module.css";
 import HouseplantPotSize from "../HouseplantPotSize/HouseplantPotSize"
 import Button from "../../UI/Button/Button";
-import sound from "../../../audio/plant-sound.mp3"
+import soundRemove from "../../../audio/plant-sound.mp3"
+import soundAdd from "../../../audio/plant-sound-plus.mp3"
+
 
 const HouseplantControl = ({type , addPot , removePot , count}) => {
-    function play() {
+    function removeSound() {
         let audio = new Audio();
         audio.preload ='auto';
-        audio.src = sound
-        audio.play()
+        audio.src = soundRemove;
+        audio.play();
+    }
+    function addSound() {
+        let audio = new Audio();
+        audio.preload ='auto';
+        audio.src = soundAdd;
+        audio.play();
     }
     return (
     <div className={classes.HouseplantControl}>
         <Button 
         className={classes.Button} 
-        onClick={() => addPot(type)}>+</Button>
+        onClick={() => {addPot(type) ; addSound()}}>+</Button>
          <HouseplantPotSize type={type} />
         <Button 
         className={classes.Button} 
-        onClick={() => {removePot(type) ; play()}} disabled={!count}>-</Button>
+        onClick={() => {removePot(type) ; removeSound()}} disabled={!count}>-</Button>
     </div> );
 }
  
