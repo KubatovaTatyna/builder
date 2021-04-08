@@ -4,7 +4,9 @@
     left: 30%;
     width: 40%;
     padding: 1rem;
-    background-color: white;
+    background-color: rgb(243 , 219 , 3);
+    color: white;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,  0, .5);
     transition: transform .5s ease-out;
 }
