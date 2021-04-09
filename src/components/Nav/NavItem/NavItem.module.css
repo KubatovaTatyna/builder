@@ -13,3 +13,12 @@
   .NavItem a.active {
     border-color: white;
   }
+
+  
+  @media(max-width:549px){
+    .NavItem a{
+        border-left:2px solid white ;
+        border-bottom: none;
+
+    }
+}
