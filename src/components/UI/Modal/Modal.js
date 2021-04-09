@@ -13,8 +13,6 @@ const Modal = ({ children, show, cancel }) => {
             <div className={classes.content} style={style}>
                 {children}
                 <div>
-                    <Button onClick={cancel} green>Checkout</Button>
-                    <Button onClick={cancel}>Cancel</Button>
                 </div>
             </div>
         </div>

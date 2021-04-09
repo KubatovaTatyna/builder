@@ -6,6 +6,7 @@ import axios from "axios";
 import React from "react"
 import Modal from "../UI/Modal/Modal";
 import OrderSummary from "./OrderSummary/OrderSummary";
+import Button from "../UI/Button/Button";
 
 const HouseplantShop = () => {
     const prices = {
@@ -48,13 +49,20 @@ const HouseplantShop = () => {
     function stopOrdering() {
         setOrdering(false)
     }
+    function finishOrdering() {
+        setOrdering(false)
+    }
     return (
         <div>
             <h1 className={classes.H1}> Houseplant Shop </h1>
             <div className={classes.HouseplantShop}>
                 <HouseplantPreview pots={pots} price={price} />
                 <HouseplantControls pots={pots} addPot={addPot} removePot={removePot} startOrdering={startOrdering} />
-                <Modal show={ordering} cancel={stopOrdering}><OrderSummary pots={pots} price={price} /></Modal>
+                <Modal show={ordering} cancel={stopOrdering}>
+                    <OrderSummary pots={pots} price={price} />
+                    <Button onClick={finishOrdering} green>Checkout</Button>
+                    <Button onClick={stopOrdering}>Cancel</Button>
+                </Modal>
             </div>
         </div>
     );
