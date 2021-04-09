@@ -20,13 +20,7 @@ const HouseplantShop = () => {
     const [price, setPrice] = useState(0);
     const [pots, setPots] = useState({});
     const [ordering , setOrdering] = useState(false)
-    useEffect(() => {
-        axios.get('https://builder-b9129-default-rtdb.firebaseio.com/default.json')
-            .then((response) => {
-                setPrice(response.data.price);
-                setPots(response.data.pots);
-            });
-    }, []);
+    useEffect(loadDefaults, []);
     
     function addPot(type) {
         const newPots = { ...pots };
@@ -43,6 +37,13 @@ const HouseplantShop = () => {
             setPrice(price - prices[type]);
         }
     }
+    function loadDefaults() {
+        axios.get('https://builder-b9129-default-rtdb.firebaseio.com/default.json')
+            .then((response) => {
+                setPrice(response.data.price);
+                setPots(response.data.pots);
+            });
+    }
     function startOrdering() {
         setOrdering(true)
     }
@@ -58,7 +59,8 @@ const HouseplantShop = () => {
             name:"Joah"
         })
         .then(()=> setOrdering(false));
-        setOrdering(false)
+        setOrdering(false);
+        loadDefaults(false);
     }
     return (
         <div>
