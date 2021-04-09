@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import React from "react"
 import Modal from "../UI/Modal/Modal";
+import OrderSummary from "./OrderSummary/OrderSummary";
 
 const HouseplantShop = () => {
     const prices = {
@@ -53,7 +54,7 @@ const HouseplantShop = () => {
             <div className={classes.HouseplantShop}>
                 <HouseplantPreview pots={pots} price={price} />
                 <HouseplantControls pots={pots} addPot={addPot} removePot={removePot} startOrdering={startOrdering} />
-                <Modal show={ordering} cancel={stopOrdering}>Hello</Modal>
+                <Modal show={ordering} cancel={stopOrdering}><OrderSummary pots={pots} price={price} /></Modal>
             </div>
         </div>
     );
