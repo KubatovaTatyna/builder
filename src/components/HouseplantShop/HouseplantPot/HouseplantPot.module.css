@@ -21,6 +21,8 @@
     animation-duration: 3s;
     animation-direction: alternate;
     animation-timing-function: linear;
+
+    z-index: 1;
 }
 
 
