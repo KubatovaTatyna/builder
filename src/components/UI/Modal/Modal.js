@@ -1,6 +1,5 @@
 import classes from "./Modal.module.css";
 import Backdrop from "../Backdrop/Backdrop";
-import Button from "../Button/Button"
 
 const Modal = ({ children, show, cancel }) => {
     const style = {
