@@ -13,6 +13,7 @@ const OrderSummary = ({pots , price}) => {
      .map(type => <li>{labels[type]} : {pots[type]}</li>)
     return ( 
         <div className={classes.OrderSummary}>
+            <h3>Order Summary:</h3>
             <ul>
                 {results}
             </ul>

@@ -50,6 +50,14 @@ const HouseplantShop = () => {
         setOrdering(false)
     }
     function finishOrdering() {
+        axios.post('https://builder-b9129-default-rtdb.firebaseio.com/default.json' ,{
+            pots:pots,
+            price:price,
+            address:"fadfda",
+            phone:"0 777 777 777",
+            name:"Joah"
+        })
+        .then(()=> setOrdering(false));
         setOrdering(false)
     }
     return (
