@@ -1,17 +1,17 @@
 .NavItem a {
-    color: white;
+    color: green;
     border-bottom: 5px solid transparent;
     text-decoration: none;
     display: block;
     padding: .5rem 1rem .35rem;
   }
   .NavItem a:hover {
-    border-color: white;
-    background-color: rgb(245, 212, 105);
+    border-color: green;
+    background-color: rgb(245, 212, 106);
   }
   .NavItem a:active,
   .NavItem a.active {
-    border-color: white;
+    border-color: green;
   }
 
   
