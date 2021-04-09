@@ -10,5 +10,4 @@
 .Logo:hover{
     transition: 1s;
     color: rgb(8, 78, 61);
-    cursor: default;
 }
