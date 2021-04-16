@@ -1,12 +1,18 @@
 import Layout from "./components/Layout/Layout";
 import HouseplantShop from "./components/HouseplantShop/HouseplantShop"
 import  "./App.css";
+import Checkout from "./components/Checkout/Checkout";
+import { Redirect, Route, Switch } from "react-router";
 
 function App() {
   return (
     <div className="App">
       <Layout>
-        <HouseplantShop />
+        <Switch>
+          <Route path="/" component={HouseplantShop} exact />
+          <Route path="/checkout" component={Checkout} />
+          <Redirect to="/" />
+        </Switch>
       </Layout>
     </div>
   );
