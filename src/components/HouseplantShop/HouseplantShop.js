@@ -8,7 +8,7 @@ import Modal from "../UI/Modal/Modal";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Button from "../UI/Button/Button";
 
-const HouseplantShop = () => {
+const HouseplantShop = ({history}) => {
     const prices = {
         alocasia: 150,
         bonsai: 100,
@@ -61,6 +61,7 @@ const HouseplantShop = () => {
         .then(()=> setOrdering(false));
         setOrdering(false);
         loadDefaults(false);
+        history.push('/checkout');
     }
     return (
         <div>
