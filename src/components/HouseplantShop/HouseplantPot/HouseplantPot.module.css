@@ -14,6 +14,7 @@
 .HouseplantPot{
     background-size: cover;
     display: flex;
+    border-bottom: 3px solid black;
 
     margin: 10px;
     animation-name: potAnimation;
