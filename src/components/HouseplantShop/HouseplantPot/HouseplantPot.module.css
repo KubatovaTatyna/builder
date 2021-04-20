@@ -3,18 +3,16 @@
         transform-origin: bottom;
     }
     50%{
-        transform: scale(.9);
+        transform: translate(10px);
         transform-origin: bottom;
     }
     100%{
-        transform: scale(1);
         transform-origin: bottom;
     }
 }
 .HouseplantPot{
     background-size: cover;
     display: flex;
-    border-bottom: 3px solid black;
 
     margin: 10px;
     animation-name: potAnimation;

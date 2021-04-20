@@ -13,7 +13,7 @@ const HouseplantPot =({type}) => {
         bonsai : {backgroundImage : `url(${bonsai})` , width:"80px", height:"80px"},
         calathea : {backgroundImage : `url(${calathea})` , width:"80px", height:"80px"},
         cyclamen : {backgroundImage : `url(${cyclamen})` , width:"80px", height:"80px"},
-        dracaena : {backgroundImage : `url(${dracaena})` , width:"80px", height:"80px"}
+        dracaena : {backgroundImage : `url(${dracaena})` , width:"80px", height:"80px"},
     }
     return ( 
         <div className={classes.HouseplantPot} style={types[type]}></div>
