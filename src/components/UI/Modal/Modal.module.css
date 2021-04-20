@@ -5,12 +5,10 @@
     width: 40%;
     padding: 1rem;
     background-color: rgb(243 , 219 , 3);
-    color: white;
+    color: black;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,  0, .5);
     transition: transform .5s ease-out;
-    background-color: white;
-    color: black;
     z-index: 2;
 }
 @media(max-width: 550px){

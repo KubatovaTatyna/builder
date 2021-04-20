@@ -2,12 +2,12 @@ import classes from "./OrderSummary.module.css";
 
 const OrderSummary = ({pots , price}) => {
     const labels = {
-        alocasia: "alocasias",
-        bonsai: "bonsais",
-        begonia:"begonias",
-        cyclamen:"cyclamens",
-        calathea:"calatheas",
-        dracaena:"dracaenas"
+        alocasia: "Alocasia",
+        bonsai: "Bonsai",
+        begonia:"Begonia",
+        cyclamen:"Cyclamen",
+        calathea:"Calathea",
+        dracaena:"Dracaena"
     }
     const results =Object.keys(pots)
      .map(type => <li>{labels[type]} : {pots[type]}</li>)
@@ -18,7 +18,7 @@ const OrderSummary = ({pots , price}) => {
                 {results}
             </ul>
             <strong>Total price: {price.toFixed(1)} som</strong>
-        </div>
+        </div>   
      );
 }
  
