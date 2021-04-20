@@ -7,12 +7,12 @@ import cyclamen from "../../../images/cyclamen.svg"
 import dracaena from "../../../images/dracaena.svg"
 const HouseplantPotSize =({type}) => {
     const types = {
-        alocasia : {backgroundImage : `url(${alocasia})` , width:"60px", height:"60px"},
-        begonia : {backgroundImage : `url(${begonia})` , width:"60px", height:"60px"},
-        bonsai : {backgroundImage : `url(${bonsai})` , width:"60px", height:"60px"},
-        calathea : {backgroundImage : `url(${calathea})` , width:"60px", height:"60px"},
-        cyclamen : {backgroundImage : `url(${cyclamen})` , width:"60px", height:"60px"},
-        dracaena : {backgroundImage : `url(${dracaena})` , width:"60px", height:"60px"}
+        alocasia : {backgroundImage : `url(${alocasia})` , width:"70px", height:"70px"},
+        begonia : {backgroundImage : `url(${begonia})` , width:"70px", height:"70px"},
+        bonsai : {backgroundImage : `url(${bonsai})` , width:"70px", height:"70px"},
+        calathea : {backgroundImage : `url(${calathea})` , width:"70px", height:"70px"},
+        cyclamen : {backgroundImage : `url(${cyclamen})` , width:"70px", height:"70px"},
+        dracaena : {backgroundImage : `url(${dracaena})` , width:"70px", height:"70px"}
     }
     return ( 
         <div style={types[type]}></div>

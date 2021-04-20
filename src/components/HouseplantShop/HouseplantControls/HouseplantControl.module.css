@@ -8,14 +8,10 @@
 }
 .HouseplantControl div{
     background-size: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #eee ;
     margin: 15px;
     margin-top: 0;
 }
 .HouseplantControl div:hover{
-    transform: none;
-}
-.HouseplantControl div:hover{
     background-color: #eee;
+    border-radius: 50%;
 }
