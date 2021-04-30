@@ -3,7 +3,7 @@
         transform-origin: bottom;
     }
     50%{
-        transform: translate(10px);
+        transform: scale(.9);
         transform-origin: bottom;
     }
     100%{
@@ -15,6 +15,10 @@
     display: flex;
 
     margin: 10px;
+    margin-top: .2rem;
+    margin-bottom: 1.9rem;
+    /* margin-top: 45px; */
+    /* margin-left: 35px; */
     animation-name: potAnimation;
     animation-iteration-count: infinite;
     animation-duration: 4s;

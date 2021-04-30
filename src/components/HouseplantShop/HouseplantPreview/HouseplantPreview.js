@@ -1,5 +1,6 @@
 import classes from "./HouseplantPreview.module.css";
-import HouseplantPot from "../HouseplantPot/HouseplantPot"
+import HouseplantPot from "../HouseplantPot/HouseplantPot";
+import shelf from "../../../images/shelf.svg"
 
 const HouseplantPreview = ({ pots, price }) => {
   const result = [];
@@ -9,17 +10,23 @@ const HouseplantPreview = ({ pots, price }) => {
     }
   }
   return (
-    <div>
     <div className={classes.HouseplantPreview}>
-        <div className={classes.pots}>
-          {result}
+      <div
+        className={classes.shelf}
+        style={{ backgroundImage: `url(${shelf})` }}>
+        <div>
+          <div className={classes.plantFlex}>
+            {result}
+          </div>
         </div>
-    </div> 
-    <div> 
-        <div className={classes.price}>{price.toFixed(1)} som</div>
-    </div>
+
+      </div>
+      <div>
+        <div className={classes.price} > {price.toFixed(1)} som</div >
+      </div>
     </div>
   );
 }
+
 
 export default HouseplantPreview;

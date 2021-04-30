@@ -1,9 +1,11 @@
-.HouseplantPreview {
-  width: 650px;
-  background-color: rgb(243, 219, 3);
-  border-radius: 50px;
-
+.HouseplantPreview{
+  flex: 0 0 663px;
   margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
 }
 .pots {
   display: flex;
@@ -22,6 +24,18 @@
   margin-bottom: 2rem;
   border-radius: 20px;
 }
+.shelf{
+    display: flex;
+    flex-wrap: wrap;
+    width: 663px;
+    min-height: 360px;
+    flex: 1 1 auto;
+}
+.plantFlex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 45px;
+}
 @media (max-width: 1020px) {
   .HouseplantPreview {
     max-width: 80%;
@@ -31,5 +45,45 @@
   }
   .price {
     margin-top: 1rem;
+  }
+}
+@media (min-width: 1040px){
+  .HouseplantPreview{
+      margin-right: 3rem;
+  }
+}
+@media (max-width: 780px){
+  .HouseplantPreview{
+      transform: scale(.8);
+  }
+}
+@media (max-width: 620px){
+  .HouseplantPreview{
+      transform: scale(.7);
+  }
+}
+@media (max-width: 510px){
+  .HouseplantPreview{
+      transform: scale(.6);
+      margin-top: -100px;
+      margin-bottom: 0px;
+  }
+  .shelf{
+      margin-bottom: 20px;
+  }
+}
+@media (max-width: 445px){
+  .HouseplantPreview{
+      transform: scale(.5);
+  }
+}
+@media (max-width: 375px){
+  .HouseplantPreview{
+      transform: scale(.4);
+  }
+}
+@media (max-width: 300px){
+  .HouseplantPreview{
+      transform: scale(.3);
   }
 }
