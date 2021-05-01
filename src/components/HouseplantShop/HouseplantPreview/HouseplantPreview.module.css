@@ -25,10 +25,10 @@
   border-radius: 20px;
 }
 .shelf{
+  background-size: auto;
     display: flex;
     flex-wrap: wrap;
-    width: 663px;
-    min-height: 360px;
+    width: 600px;
     flex: 1 1 auto;
 }
 .plantFlex {

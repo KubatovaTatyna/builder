@@ -1,6 +1,6 @@
 import classes from "./HouseplantPreview.module.css";
 import HouseplantPot from "../HouseplantPot/HouseplantPot";
-import shelf from "../../../images/shelf.svg"
+import shelf from "../../../images/shelf.png"
 
 const HouseplantPreview = ({ pots, price }) => {
   const result = [];
