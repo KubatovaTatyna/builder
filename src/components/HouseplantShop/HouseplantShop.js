@@ -7,6 +7,7 @@ import React from "react"
 import Modal from "../UI/Modal/Modal";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Button from "../UI/Button/Button";
+import { useSelector } from "react-redux";
 
 const HouseplantShop = ({history}) => {
     const prices = {
@@ -17,33 +18,35 @@ const HouseplantShop = ({history}) => {
         calathea:100,
         dracaena:80
     }
-    const [price, setPrice] = useState(0);
-    const [pots, setPots] = useState({});
+    const pots = useSelector(state => state.pots);
+    const price = useSelector(state => state.price);
     const [ordering , setOrdering] = useState(false)
-    useEffect(loadDefaults, []);
     
     function addPot(type) {
         const newPots = { ...pots };
         newPots[type]++;
-        setPots(newPots);
-        setPrice(price + prices[type]);
+        // setPots(newPots);
+        // setPrice(price + prices[type]);
     };
 
     function removePot(type) {
         if (pots[type]) {
             const newPots = { ...pots };
             newPots[type]--;
-            setPots(newPots);
-            setPrice(price - prices[type]);
+            // setPots(newPots);
+            // setPrice(price - prices[type]);
         }
     }
-    function loadDefaults() {
-        axios.get('https://builder-b9129-default-rtdb.firebaseio.com/default.json')
-            .then((response) => {
-                setPrice(response.data.price);
-                setPots(response.data.pots);
-            });
-    }
+    
+    // useEffect(loadDefaults, []);
+    
+    // function loadDefaults() {
+    //     axios.get('https://builder-b9129-default-rtdb.firebaseio.com/default.json')
+    //         .then((response) => {
+    //             setPrice(response.data.price);
+    //             setPots(response.data.pots);
+    //         });
+    // }
     function startOrdering() {
         setOrdering(true)
     }
@@ -60,7 +63,7 @@ const HouseplantShop = ({history}) => {
         })
         .then(()=> setOrdering(false));
         setOrdering(false);
-        loadDefaults(false);
+        // loadDefaults(false);
         history.push('/checkout');
     }
     return (
