@@ -1,7 +1,0 @@
-.CheckoutSummary {
-    display: flex;
-    flex-direction: column;
-    max-width: 650px;
-    margin: 2rem auto;
-    text-align: center;
-  }
