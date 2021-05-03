@@ -4,6 +4,7 @@
     
     font-size: 1.7rem;
     background:rgb(243, 219, 3);
+    background: linear-gradient(52deg, rgba(238,216,171,1) 17%, rgba(227,191,43,1) 46%, rgba(231,138,46,1) 76%);
     color: green;
     box-shadow:  0 0 10px rgba(0, 0, 0, .5);
     position: sticky;

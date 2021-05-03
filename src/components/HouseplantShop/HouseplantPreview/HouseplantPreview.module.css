@@ -30,6 +30,7 @@
     flex-wrap: wrap;
     width: 600px;
     flex: 1 1 auto;
+    margin-bottom: 70px;
 }
 .plantFlex {
   display: flex;
