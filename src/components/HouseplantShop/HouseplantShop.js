@@ -10,33 +10,10 @@ import Button from "../UI/Button/Button";
 import { useSelector } from "react-redux";
 
 const HouseplantShop = ({history}) => {
-    const prices = {
-        alocasia: 150,
-        bonsai: 100,
-        begonia:140,
-        cyclamen:200,
-        calathea:100,
-        dracaena:80
-    }
     const pots = useSelector(state => state.pots);
     const price = useSelector(state => state.price);
-    const [ordering , setOrdering] = useState(false)
+    const [ordering , setOrdering] = useState(false);
     
-    function addPot(type) {
-        const newPots = { ...pots };
-        newPots[type]++;
-        // setPots(newPots);
-        // setPrice(price + prices[type]);
-    };
-
-    function removePot(type) {
-        if (pots[type]) {
-            const newPots = { ...pots };
-            newPots[type]--;
-            // setPots(newPots);
-            // setPrice(price - prices[type]);
-        }
-    }
     
     // useEffect(loadDefaults, []);
     
@@ -47,6 +24,10 @@ const HouseplantShop = ({history}) => {
     //             setPots(response.data.pots);
     //         });
     // }
+
+    
+
+
     function startOrdering() {
         setOrdering(true)
     }
@@ -71,7 +52,7 @@ const HouseplantShop = ({history}) => {
             <h1 className={classes.H1}> Houseplant Shop </h1>
             <div className={classes.HouseplantShop}>
                 <HouseplantPreview pots={pots} price={price} />
-                <HouseplantControls pots={pots} addPot={addPot} removePot={removePot} startOrdering={startOrdering} />
+                <HouseplantControls pots={pots} startOrdering={startOrdering} />
                 <Modal show={ordering} cancel={stopOrdering}>
                     <OrderSummary pots={pots} price={price} />
                     <Button onClick={finishOrdering} green>Checkout</Button>

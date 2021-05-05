@@ -9,9 +9,32 @@ const initialState = {
   },
   price:800,
 };
-
+const prices = {
+  alocasia: 150,
+  bonsai: 100,
+  begonia:140,
+  cyclamen:200,
+  calathea:100,
+  dracaena:80
+}
 const builderReducer = (state = initialState, action) => {
-  return state;
+  const newState = { ...state };
+
+  switch (action.type) {
+    case "ADD_POT":
+      newState.pots[action.pot]++;
+      newState.price += prices[action.pot];
+      break;
+    case "REMOVE_POT":
+      newState.pots[action.pot]--;
+      newState.price -= prices[action.pot];
+      break;
+
+    default:
+      break;
+  }
+
+  return newState;
 }
 
 export default builderReducer;

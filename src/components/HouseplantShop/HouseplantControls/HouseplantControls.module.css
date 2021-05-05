@@ -1,14 +1,49 @@
-.HouseplantControls{
-    background-color: rgb(59, 163, 59);
-    width: 300px;
-    height: 600px;
-    padding: 1rem;
-    border-radius: 50px;
-    text-align: center;
+.HouseplantControls {
+  background-color: rgb(59, 163, 59);
+  width: 300px;
+  height: 600px;
+  padding: 1rem;
+  border-radius: 50px;
+  text-align: center;
 }
-@media(max-width:1020px){
-    .HouseplantControls{
-        max-width: 80%;
-        margin: 3rem auto;
-    }
+@media (max-width: 1020px) {
+  .HouseplantControls {
+    max-width: 80%;
+    margin: 3rem auto;
+  }
+}
+@media (max-width: 780px) {
+  .HouseplantControls {
+    transform: scale(0.8);
+    margin-top: -100px;
+  }
+}
+@media (max-width: 620px) {
+  .HouseplantControls {
+    transform: scale(0.7);
+    margin-top: -150px;
+  }
+}
+@media (max-width: 510px) {
+  .HouseplantControls {
+    transform: scale(0.6);
+    margin-top: -150px;
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 445px) {
+  .HouseplantControls {
+    margin-top: -150px;
+    transform: scale(0.5);
+  }
+}
+@media (max-width: 375px) {
+  .HouseplantControls {
+    transform: scale(0.4);
+  }
+}
+@media (max-width: 300px) {
+  .HouseplantControls {
+    transform: scale(0.3);
+  }
 }
