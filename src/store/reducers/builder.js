@@ -1,4 +1,4 @@
-import { ADD_POT, REMOVE_POT, SET_POTS } from "./actions/types";
+import { ADD_POT, REMOVE_POT, SET_POTS } from "../actions/types";
 
 const initialState = {
   pots :{
@@ -13,7 +13,7 @@ const prices = {
   calathea:100,
   dracaena:80
 }
-const builderReducer = (state = initialState, action) => {
+const builder = (state = initialState, action) => {
   const newState = { ...state };
 
   switch (action.type) {
@@ -37,4 +37,4 @@ const builderReducer = (state = initialState, action) => {
   return newState;
 }
 
-export default builderReducer;
+export default builder;
