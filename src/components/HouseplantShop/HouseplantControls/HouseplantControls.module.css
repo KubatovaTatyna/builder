@@ -1,10 +1,11 @@
 .HouseplantControls {
   background-color: rgb(59, 163, 59);
-  width: 300px;
-  height: 600px;
+  width: 250px;
+  height: 500px;
   padding: 1rem;
   border-radius: 50px;
   text-align: center;
+  margin-bottom: 2rem;
 }
 @media (max-width: 1020px) {
   .HouseplantControls {
