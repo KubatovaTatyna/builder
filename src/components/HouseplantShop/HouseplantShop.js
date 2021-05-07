@@ -16,7 +16,7 @@ const HouseplantShop = ({history}) => {
     const [ordering , setOrdering] = useState(false);
     
     
-    useEffect(() => dispatch(load()), []);
+    useEffect(() => dispatch(load()), [dispatch]);
     
     // function loadDefaults() {
     //     axios.get('https://builder-b9129-default-rtdb.firebaseio.com/default.json')
