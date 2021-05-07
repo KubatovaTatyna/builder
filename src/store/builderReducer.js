@@ -1,15 +1,9 @@
-import { ADD_POT, REMOVE_POT } from "./actions/types";
+import { ADD_POT, REMOVE_POT, SET_POTS } from "./actions/types";
 
 const initialState = {
   pots :{
-        alocasia: 2,
-        bonsai: 2,
-        begonia:2,
-        cyclamen:2,
-        calathea:2,
-        dracaena:2
   },
-  price:800,
+  price:0,
 };
 const prices = {
   alocasia: 150,
@@ -31,6 +25,10 @@ const builderReducer = (state = initialState, action) => {
       newState.pots[action.pot]--;
       newState.price -= prices[action.pot];
       break;
+      case SET_POTS:
+        newState.pots = action.data.pots;
+        newState.price = action.data.price;
+        break;
 
     default:
       break;

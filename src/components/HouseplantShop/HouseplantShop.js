@@ -1,21 +1,23 @@
 import HouseplantControls from "./HouseplantControls/HouseplantControls";
 import HouseplantPreview from "./HouseplantPreview/HouseplantPreview";
 import classes from "./HouseplantShop.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import React from "react"
 import Modal from "../UI/Modal/Modal";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Button from "../UI/Button/Button";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { load } from "../../store/actions/builder";
 
 const HouseplantShop = ({history}) => {
+    const dispatch = useDispatch();
     const pots = useSelector(state => state.pots);
     const price = useSelector(state => state.price);
     const [ordering , setOrdering] = useState(false);
     
     
-    // useEffect(loadDefaults, []);
+    useEffect(() => dispatch(load()), []);
     
     // function loadDefaults() {
     //     axios.get('https://builder-b9129-default-rtdb.firebaseio.com/default.json')
