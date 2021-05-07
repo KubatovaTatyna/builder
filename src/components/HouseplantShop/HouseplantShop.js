@@ -2,7 +2,6 @@ import HouseplantControls from "./HouseplantControls/HouseplantControls";
 import HouseplantPreview from "./HouseplantPreview/HouseplantPreview";
 import classes from "./HouseplantShop.module.css";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import React from "react"
 import Modal from "../UI/Modal/Modal";
 import OrderSummary from "./OrderSummary/OrderSummary";
