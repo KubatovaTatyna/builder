@@ -3,7 +3,7 @@ import HouseplantPotSize from "../HouseplantPotSize/HouseplantPotSize"
 import Button from "../../UI/Button/Button";
 import soundRemove from "../../../audio/plant-sound.mp3"
 import { useDispatch } from "react-redux";
-// import soundAdd from "../../../audio/plant-sound-plus.mp3"
+import { add, remove } from "../../../store/actions/builder";
 
 
 const HouseplantControl = ({type , count}) => {
@@ -20,11 +20,11 @@ const HouseplantControl = ({type , count}) => {
     <div className={classes.HouseplantControl}>
         <Button 
         className={classes.Button} 
-        onClick={() => dispatch({type: "ADD_POT" ,  pot:type})}>+</Button>
+        onClick={() => dispatch(add(type))}>+</Button>
          <HouseplantPotSize type={type} />
         <Button 
         className={classes.Button} 
-        onClick={() => {dispatch({type: "REMOVE_POT" , pot:type}) ; removeSound()}} disabled={!count}>-</Button>
+        onClick={() => {dispatch(remove(type)) ; removeSound()}} disabled={!count}>-</Button>
     </div> );
 }
  

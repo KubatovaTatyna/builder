@@ -6,6 +6,7 @@ import {createStore , applyMiddleware} from 'redux'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import builderReducer from './store/builderReducer';
+import thunk from 'redux-thunk';
 
 const store = createStore(builderReducer , applyMiddleware(thunk));
 
