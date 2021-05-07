@@ -8,6 +8,8 @@ import OrderSummary from "./OrderSummary/OrderSummary";
 import Button from "../UI/Button/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { load } from "../../store/actions/builder";
+import withAxios from "../withAxios";
+import axios from "axios";
 
 const HouseplantShop = ({history}) => {
     const dispatch = useDispatch();
@@ -56,4 +58,4 @@ const HouseplantShop = ({history}) => {
     );
 }
 
-export default HouseplantShop;
+export default withAxios(HouseplantShop , axios) ;

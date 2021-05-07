@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../../axios";
 import { ADD_POT, REMOVE_POT, SET_POTS } from "./types";
 
 export const add = (pot) => ({
@@ -13,6 +13,6 @@ export const set = (data) => ({
     data: data
   });
 export const load = () => {
-    return (dispatch) => axios.get("https://builder-b9129-default-rtdb.firebaseio.com/default.json")
+    return (dispatch) => axios.get("/default.json")
       .then(response => dispatch(set(response.data)))
   };

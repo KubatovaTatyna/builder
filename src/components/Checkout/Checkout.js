@@ -1,8 +1,9 @@
 import HouseplantPreview from "../HouseplantShop/HouseplantPreview/HouseplantPreview";
 import classes from "./Checkout.module.css";
 import CheckoutForm from "./CheckoutForm/CheckoutForm";
-import axios from "axios";
+import axios from "../../axios";
 import { useSelector } from "react-redux";
+import withAxios from "../withAxios";
 
 const Checkout = ({ history }) => {
 
@@ -16,7 +17,7 @@ const Checkout = ({ history }) => {
     function submitCallback(event) {
         const data = new FormData(event.target);
     
-        axios.post('https://builder-b9129-default-rtdb.firebaseio.com/orders.json', {
+        axios.post('/orders.json', {
           name: data.get('name'),
           address: data.get('address'),
           phone: data.get('phone'),
@@ -39,4 +40,4 @@ const Checkout = ({ history }) => {
     );
 }
 
-export default Checkout ;
+export default withAxios(Checkout , axios)  ;
