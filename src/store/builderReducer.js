@@ -1,3 +1,5 @@
+import { ADD_POT, REMOVE_POT } from "./actions/types";
+
 const initialState = {
   pots :{
         alocasia: 2,
@@ -21,11 +23,11 @@ const builderReducer = (state = initialState, action) => {
   const newState = { ...state };
 
   switch (action.type) {
-    case "ADD_POT":
+    case ADD_POT:
       newState.pots[action.pot]++;
       newState.price += prices[action.pot];
       break;
-    case "REMOVE_POT":
+    case REMOVE_POT:
       newState.pots[action.pot]--;
       newState.price -= prices[action.pot];
       break;
