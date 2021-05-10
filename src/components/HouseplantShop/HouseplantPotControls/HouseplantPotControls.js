@@ -5,7 +5,7 @@ import bonsai from "../../../images/bonsai.svg"
 import calathea from "../../../images/calathea.svg"
 import cyclamen from "../../../images/cyclamen.svg"
 import dracaena from "../../../images/dracaena.svg"
-const HouseplantPotSize =({type}) => {
+const HouseplantPotControls =({type}) => {
     const types = {
         alocasia : {backgroundImage : `url(${alocasia})` , width:"50px", height:"50px"},
         begonia : {backgroundImage : `url(${begonia})` , width:"50px", height:"50px"},
@@ -19,4 +19,4 @@ const HouseplantPotSize =({type}) => {
      );
 }
  
-export default HouseplantPotSize;
+export default HouseplantPotControls;

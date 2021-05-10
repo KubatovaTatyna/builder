@@ -1,9 +1,9 @@
 import classes from "../HouseplantControls/HouseplantControl.module.css";
-import HouseplantPotSize from "../HouseplantPotSize/HouseplantPotSize"
 import Button from "../../UI/Button/Button";
 import soundRemove from "../../../audio/plant-sound.mp3"
 import { useDispatch } from "react-redux";
 import { add, remove } from "../../../store/actions/builder";
+import HouseplantPotControls from "../HouseplantPotControls/HouseplantPotControls";
 
 
 const HouseplantControl = ({type , count}) => {
@@ -21,7 +21,7 @@ const HouseplantControl = ({type , count}) => {
         <Button 
         className={classes.Button} 
         onClick={() => dispatch(add(type))}>+</Button>
-         <HouseplantPotSize type={type} />
+         <HouseplantPotControls type={type} />
         <Button 
         className={classes.Button} 
         onClick={() => {dispatch(remove(type)) ; removeSound()}} disabled={!count}>-</Button>
