@@ -11,15 +11,15 @@ import { load } from "../../store/actions/builder";
 import withAxios from "../withAxios";
 import axios from "axios";
 
-const HouseplantShop = ({history}) => {
+const HouseplantShop = ({ history }) => {
     const dispatch = useDispatch();
     const pots = useSelector(state => state.builder.pots);
     const price = useSelector(state => state.builder.price);
-    const [ordering , setOrdering] = useState(false);
-    
-    
+    const [ordering, setOrdering] = useState(false);
+
+
     useEffect(() => dispatch(load()), [dispatch]);
-    
+
     // function loadDefaults() {
     //     axios.get('https://builder-b9129-default-rtdb.firebaseio.com/default.json')
     //         .then((response) => {
@@ -28,7 +28,7 @@ const HouseplantShop = ({history}) => {
     //         });
     // }
 
-    
+
 
 
     function startOrdering() {
@@ -58,4 +58,4 @@ const HouseplantShop = ({history}) => {
     );
 }
 
-export default withAxios(HouseplantShop , axios) ;
+export default withAxios(HouseplantShop, axios);

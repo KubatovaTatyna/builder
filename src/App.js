@@ -1,6 +1,6 @@
 import Layout from "./components/Layout/Layout";
 import HouseplantShop from "./components/HouseplantShop/HouseplantShop"
-import  "./App.css";
+import "./App.css";
 import Checkout from "./components/Checkout/Checkout";
 import { Redirect, Route, Switch } from "react-router";
 import Orders from "./components/Orders/Orders";
