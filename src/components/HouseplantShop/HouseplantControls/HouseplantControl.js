@@ -1,31 +1,30 @@
 import classes from "../HouseplantControls/HouseplantControl.module.css";
 import Button from "../../UI/Button/Button";
-import soundRemove from "../../../audio/plant-sound.mp3"
+import soundRemove from "../../../audio/plant-sound.mp3";
 import { useDispatch } from "react-redux";
 import { add, remove } from "../../../store/actions/builder";
-import HouseplantPotControls from "../HouseplantPotControls/HouseplantPotControls";
+import HouseplantPotControls from "./HouseplantPotControls/HouseplantPotControls";
 
+const HouseplantControl = ({ type, count }) => {
+  const dispatch = useDispatch();
 
-const HouseplantControl = ({type , count}) => {
-
-    const dispatch = useDispatch()
-
-    function removeSound() {
-        let audio = new Audio();
-        audio.preload ='auto';
-        audio.src = soundRemove;
-        audio.play();
-    }
-    return (
+  return (
     <div className={classes.HouseplantControl}>
-        <Button 
-        className={classes.Button} 
-        onClick={() => dispatch(add(type))}>+</Button>
-         <HouseplantPotControls type={type} />
-        <Button 
-        className={classes.Button} 
-        onClick={() => {dispatch(remove(type)) ; removeSound()}} disabled={!count}>-</Button>
-    </div> );
-}
- 
+      <Button className={classes.Button} onClick={() => dispatch(add(type))}>
+        +
+      </Button>
+      <HouseplantPotControls type={type} />
+      <Button
+        className={classes.Button}
+        onClick={() => {
+          dispatch(remove(type));
+        }}
+        disabled={!count}
+      >
+        -
+      </Button>
+    </div>
+  );
+};
+
 export default HouseplantControl;
