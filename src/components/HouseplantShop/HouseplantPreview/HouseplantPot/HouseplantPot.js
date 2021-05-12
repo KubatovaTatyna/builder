@@ -10,33 +10,33 @@ const HouseplantPot = ({ type }) => {
   const types = {
     alocasia: {
       backgroundImage: `url(${alocasia})`,
-      width: "75px",
-      height: "75px",
+      width: "85px",
+      height: "85px",
     },
     begonia: {
       backgroundImage: `url(${begonia})`,
-      width: "75px",
-      height: "75px",
+      width: "85px",
+      height: "85px",
     },
     bonsai: {
       backgroundImage: `url(${bonsai})`,
-      width: "75px",
-      height: "75px",
+      width: "85px",
+      height: "85px",
     },
     calathea: {
       backgroundImage: `url(${calathea})`,
-      width: "75px",
-      height: "75px",
+      width: "85px",
+      height: "85px",
     },
     cyclamen: {
       backgroundImage: `url(${cyclamen})`,
-      width: "75px",
-      height: "75px",
+      width: "85px",
+      height: "85px",
     },
     dracaena: {
       backgroundImage: `url(${dracaena})`,
-      width: "75px",
-      height: "75px",
+      width: "85px",
+      height: "85px",
     },
   };
   return <div className={classes.HouseplantPot} style={types[type]}></div>;
