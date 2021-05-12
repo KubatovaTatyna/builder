@@ -1,6 +1,5 @@
 import classes from "../HouseplantControls/HouseplantControl.module.css";
 import Button from "../../UI/Button/Button";
-import soundRemove from "../../../audio/plant-sound.mp3";
 import { useDispatch } from "react-redux";
 import { add, remove } from "../../../store/actions/builder";
 import HouseplantPotControls from "./HouseplantPotControls/HouseplantPotControls";
