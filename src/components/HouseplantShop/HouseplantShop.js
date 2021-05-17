@@ -15,6 +15,7 @@ const HouseplantShop = ({ history }) => {
   const dispatch = useDispatch();
   const pots = useSelector((state) => state.builder.pots);
   const price = useSelector((state) => state.builder.price);
+
   const [ordering, setOrdering] = useState(false);
 
   useEffect(() => dispatch(load()), [dispatch]);

@@ -11,3 +11,40 @@ H1{
     margin: 10px 0;
     color: green;
 }
+
+@media (min-width: 1040px){
+    .H1{
+        margin-right: 3rem;
+    }
+  }
+  @media (max-width: 780px){
+    .H1{
+        transform: scale(.8);
+    }
+  }
+  @media (max-width: 620px){
+    .H1{
+        transform: scale(.7);
+    }
+  }
+  @media (max-width: 510px){
+    .H1{
+        transform: scale(.6);
+        margin-bottom: 0px;
+    }
+  }
+  @media (max-width: 445px){
+    .H1{
+        transform: scale(.5);
+    }
+  }
+  @media (max-width: 375px){
+    .H1{
+        transform: scale(.4);
+    }
+  }
+  @media (max-width: 300px){
+    .H1{
+        transform: scale(.3);
+    }
+  }
