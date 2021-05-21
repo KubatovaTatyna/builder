@@ -13,6 +13,7 @@ import axios from "axios";
 
 const HouseplantShop = ({ history }) => {
   const dispatch = useDispatch();
+  const isAuthenticated = useSelector(state => state.auth.token !== null);
   const pots = useSelector((state) => state.builder.pots);
   const price = useSelector((state) => state.builder.price);
 
@@ -21,7 +22,12 @@ const HouseplantShop = ({ history }) => {
   useEffect(() => dispatch(load()), [dispatch]);
 
   function startOrdering() {
-    setOrdering(true);
+    if(isAuthenticated) {
+      setOrdering(true);
+    }
+    else {
+      history.push("/auth");
+    }
   }
 
   function stopOrdering() {
