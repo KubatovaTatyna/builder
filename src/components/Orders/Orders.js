@@ -13,7 +13,7 @@ const Orders = () => {
 
   useEffect(() => {
     dispatch(load(token , id));
-  }, [dispatch]);
+  }, [dispatch , token , id]);
 
   const results = orders.map((order) => <Order key={order.id} {...order} />);
 
