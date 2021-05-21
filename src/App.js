@@ -22,7 +22,7 @@ function App() {
       <Route path="/auth" component={Auth} />
     </Switch>
   );
-  if (routesOutput) {
+  if (isAuthenticated) {
     routesOutput = (
       <Switch>
         <Route path="/" component={HouseplantShop} exact />
