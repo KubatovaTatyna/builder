@@ -7,7 +7,7 @@ const initialState = {
   loading: false,
 };
 
-export default (state = initialState, action) => {
+const auth =  (state = initialState, action) => {
   const newState = { ...state };
 
   switch (action.type) {
@@ -38,3 +38,4 @@ export default (state = initialState, action) => {
       return newState;
   }
 }; 
+export default auth;
