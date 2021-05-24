@@ -1,0 +1,11 @@
+.Order{
+  color: rgb(92, 121, 86);
+  margin: 2rem;
+  padding: 1rem;
+  width: 15rem;
+  font-size: 20px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+}
+.strong{
+  color: green;
+}
